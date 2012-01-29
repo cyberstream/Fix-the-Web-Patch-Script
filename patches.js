@@ -1,3 +1,3 @@
-/* Opera's "Fix the Web" patch file
-* Fixes for broken web pages
+/* Opera's "Fix the Web" JS patch file
+* Broken web page fixes
 */
