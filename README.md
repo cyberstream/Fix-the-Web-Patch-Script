@@ -8,10 +8,10 @@ Remember, our top priority is to fix the web for everyone, not just the users of
 
 ##How to Apply a Patch
 
-This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with conditional `if ()` block.
+This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with a conditional `if ()` block.
 
 ##Patches
 
 *There are no patches yet.* Use this syntax to document each patch:
 
-**sitename.com/affected-pages** - information about problem your patch fixed
+**sitename.com/fixed-pages** - information about the problem your patch fixed
