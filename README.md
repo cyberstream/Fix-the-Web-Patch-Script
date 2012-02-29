@@ -8,7 +8,7 @@ Remember, our top priority is to fix the web for everyone, not just the users of
 
 ##How to Apply a Patch
 
-This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with a conditional `if ()` block.
+This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with a conditional `if ()` block. Don't let your code leak to the global scope.
 
 ##Patches
 
