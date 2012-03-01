@@ -12,6 +12,10 @@ This Javascript is injected into *all* web pages, so restrict the patch to the p
 
 ##Patches
 
-*There are no patches yet.* Use this syntax to document each patch:
+Use this syntax to document each patch:
 
 **sitename.com/fixed-pages** - information about the problem your patch fixed
+
+Patches:
+
+**http://www.newsminer.com** - fixed the cramped links in the lists under "National News", "International News", and "Entertainment News"
