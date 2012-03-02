@@ -16,16 +16,16 @@ Check out [this page](http://my.opera.com/fix-the-web/blog/2012/03/01/how-to-pat
 
 Use this syntax to document each patch in a commented-out line about your patch:
 
-`// PATCH-**id** (**latest stable Opera version tested**, **status**, **sitename.com/fixed-page(s)**) information about the bug that this patch fixes`
+`// PATCH-id (latest stable Opera version tested, status, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
 
-Make "status" "**patch added**" when you add the patch. When a new stable version of Opera is released or a website's code is updated, you may want to test if the patches in the file are still required. If the bug on the website is no longer there, then remove the patch code, **but don't remove the comment**. Just change the comment to this:
+Make "status" "patch added" when you add the patch. When a new stable version of Opera is released or a website's code is updated, you may want to test if the patches in the file are still required. If the bug on the website is no longer there, then remove the patch code, **but don't remove the comment**. Just change the comment to this:
 
-`// PATCH-id (**latest stable Opera version tested**, **patch removed**, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
+`// PATCH-id (latest stable Opera version tested, patch removed, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
 
 If the patch is still needed, but you want to show that you tested it again, then change the comment to this:
 
-`// PATCH-id (**latest stable Opera version tested**, **patch still needed**, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
+`// PATCH-id (latest stable Opera version tested, patch still needed, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
 
 If the bug changed so that the current patch is no longer fixing the bug, then update the patch's code and update the comment to this:
 
-`// PATCH-id (**latest stable Opera version tested**, **patch updated**, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
+`// PATCH-id (latest stable Opera version tested, patch updated, sitename.com/fixed-page(s)) information about the bug that this patch fixes`
