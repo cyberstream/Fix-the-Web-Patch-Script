@@ -46,4 +46,8 @@
     if ( (/(www\.)?newsminer\.com\/?$/i).test(url) ) { 
         addCSS('.ap_table_styles li { padding: 7px 4px}');
     }
+    // fix the overflowed ul tag section in .Box {site:memurlar.net}
+    if ( (/(www\.)?memurlar\.net\/?$/i).test(url) ) { 
+        addCSS('div.Box ul { padding-left:22px; margin-left:0px !important } div.Box a.ListItem { padding-left:22px !important; }');
+    }
 })()
