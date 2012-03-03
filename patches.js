@@ -53,7 +53,39 @@
     }
 
     // PATCH-3 (11.61, patch added, trtspor.com.tr) Fixed invisible content of body
-    if ( (/(www\.)?trtspor\.com.tr\/?$/i).test(url) ) { 
+    if ( (/(www\.)?trtspor\.com.tr\/?/i).test(url) ) { 
         addCSS('#main{content: inherit;}');
     }
+
+    // PATCH-4 (11.61, patch added, memurlar.net/forum) Fixed undesireable cell align of the forum table
+    if ( (/forum\.memurlar\.net\/kategori/i).test(url) ) {
+        var c=document.getElementsByTagName('table'); 
+        var c_adet = c.length;
+
+        var m=0,i=0;
+        for (m = 0; m < c_adet; m++) {
+            if (c[m].getAttribute('width') == '100%' && c[m].getAttribute('cellpadding') == '2' && c[m].getAttribute('cellspacing') == '1') {
+                var k1=c[m].getElementsByTagName('thead');
+                var k2=k1[0].getElementsByTagName('tr');
+                var k3=k2[0].getElementsByTagName('th');
+                k2[0].removeChild(k3[0]);
+                break;
+            }
+        }
+        
+        var bb=document.getElementsByTagName('tr'); 
+        var bb_adet = bb.length;
+        for (i = 0; i < bb_adet; i++) {
+            if (bb[i].getAttribute('class') == 'Even' || bb[i].getAttribute('class') =='Prior') {
+                var td_ele=bb[i].getElementsByTagName('td');
+                bb[i].removeChild(td_ele[0]);
+            }
+        }
+    }
+
+    // PATCH-5 (11.61, patch added, sanalgsm.com and netgsm.com.tr) Fixed too small captcha images
+    if ( (/(sanalgsm\.com|netgsm\.com\.tr)\/gresim.asp$/i).test(url) ) {
+        addCSS('.contain{padding:0}');
+    }
+
 })()
