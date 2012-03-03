@@ -48,7 +48,7 @@
     }
     
     // PATCH-2 (11.62, patch added, memurlar.net) Fix the overflowed ul tag section in .Box
-    if ( (/(www\.)?memurlar\.net\/?$/i).test(url) ) { 
+    if ( (/(www\.)?memurlar\.net\/?/i).test(url) ) { 
         addCSS('div.Box ul { padding-left:22px; margin-left:0px !important } div.Box a.ListItem { padding-left:22px !important; }');
     }
 
