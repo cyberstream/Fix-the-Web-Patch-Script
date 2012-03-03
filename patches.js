@@ -87,7 +87,7 @@
 
     // PATCH-5 (11.61, patch added, sanalgsm.com and netgsm.com.tr) Fixed too small captcha images
     if ( (/(sanalgsm\.com|netgsm\.com\.tr)\/gresim.asp$/i).test(url) ) {
-        addCSS('.contain{padding:0}');
+        addCSS('.contain{padding:0 !important}');
     }
 
 })()
