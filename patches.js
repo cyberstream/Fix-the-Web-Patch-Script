@@ -51,4 +51,9 @@
     if ( (/(www\.)?memurlar\.net\/?$/i).test(url) ) { 
         addCSS('div.Box ul { padding-left:22px; margin-left:0px !important } div.Box a.ListItem { padding-left:22px !important; }');
     }
+
+    // PATCH-3 (11.61, patch added, trtspor.com.tr) Fixed invisible content of body
+    if ( (/(www\.)?trtspor\.com.tr\/?$/i).test(url) ) { 
+        addCSS('#main{content: inherit;}');
+    }
 })()
