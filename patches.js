@@ -51,9 +51,9 @@
 	else if (hostname.indexOf('memurlar.net') > -1) {
         addCSS('div.Box ul { padding-left:22px; margin-left:0px !important } div.Box a.ListItem { padding-left:22px !important; }');
 		
-		// PATCH-4 (11.61, patch added, memurlar.net/forum) Fixed undesireable cell align of the forum table
+		// PATCH-4 (11.61, patch added, forum.memurlar.net) Fixed undesireable cell align of the forum table
 		if (hostname.indexOf('forum.') > -1 && pathname.indexOf('kategori') > -1) {
-			document.addEventListener("DOMContentLoaded",function(){
+			
 				var c=document.getElementsByTagName('table'); 
 				var c_adet = c.length;
 
@@ -76,7 +76,7 @@
 						bb[i].removeChild(td_ele[0]);
 					}
 				}
-			},false);
+			
 		}
 	}
 
