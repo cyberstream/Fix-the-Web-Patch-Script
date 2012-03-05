@@ -48,7 +48,7 @@
     }
     
     // PATCH-2 (11.62, patch added, memurlar.net) Fix the overflowed ul tag section in .Box
-	else if (hostname.indexOf('memurlar.net') > -1) {
+    else if (hostname.indexOf('memurlar.net') > -1) {
         addCSS('div.Box ul { padding-left:22px; margin-left:0px !important } div.Box a.ListItem { padding-left:22px !important; }');
 		
 		// PATCH-4 (11.61, patch added, forum.memurlar.net) Fixed undesireable cell align of the forum table
@@ -81,15 +81,14 @@
 	}
 
     // PATCH-3 (11.61, patch added, trtspor.com.tr) Fixed invisible content of body
-	else if (hostname.indexOf('trtspor.com') > -1) {
+    else if (hostname.indexOf('trtspor.com') > -1) {
         addCSS('#main{content: inherit;}');
     }
 
-	// PATCH-5 (11.61, patch added, sanalgsm.com and netgsm.com.tr) Fixed too small captcha images
-	else if (hostname.indexOf('sanalgsm.com') > -1 || hostname.indexOf('netgsm.com.tr') > -1) {
-		if (pathname.indexOf('gresim.asp') > -1) {
-			addCSS('.contain{padding:0 !important}');
-		}
-	}
-
+    // PATCH-5 (11.61, patch added, sanalgsm.com and netgsm.com.tr) Fixed too small captcha images
+    else if (hostname.indexOf('sanalgsm.com') > -1 || hostname.indexOf('netgsm.com.tr') > -1) {
+            if (pathname.indexOf('gresim.asp') > -1) {
+                    addCSS('.contain{padding:0 !important}');
+            }
+    }
 })()
