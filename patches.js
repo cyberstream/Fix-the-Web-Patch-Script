@@ -8,10 +8,10 @@
 
 (function() {
     var hostname = location.hostname,
-		href = location.href, 
-		pathname = location.pathname,
-		opera_version = opera.version(),
-		opera_build = opera.buildNumber();
+                              href = location.href, 
+                              pathname = location.pathname,
+                              opera_version = opera.version(),
+                              opera_build = opera.buildNumber();
           
     // add CSS to the web page
     function addCSS ( css ) {     
@@ -90,5 +90,10 @@
             if (pathname.indexOf('gresim.asp') > -1) {
                     addCSS('.contain{padding:0 !important}');
             }
+    }
+    
+    // PATCH-6 (11.62, patch added, invisionzone.com user profile pages) Fixed color fade in annoyance when hovering over sidebar items
+    else if ( href.indexOf('invisionzone.com/index.php?showuser=') > -1 || href.indexOf('invisionpower.com/user/') > -1 ) {
+        addCSS ('.ipsVerticalTabbed_tabs li a {background: #F6F8FB;}');
     }
 })()
