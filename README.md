@@ -1,16 +1,22 @@
-#Patch the Web
+#NOTICE: THIS REPOSITORY IS NO LONGER ACTIVE!
 
-This is the Javascript patch file for the Opera ["Fix the Web"](http://github.com/cyberstream/Fix-the-Web) extension.
+Due to potential security vulnerabilities in the extension using the original method of fetching **patches.js** from Github, we have revised our approach for applying patches to web pages. 
+
+The **patches.js** file is now located in the [main extension repository](http://github.com/cyberstream/Fix-the-Web) in the *includes/* directory. However, if your patch merely injects CSS into the web page, then you can add a patch in the **patches.json** file in the [CSS patches repository](http://github.com/cyberstream/Fix-the-Web-CSS-Patches).
+
+That being said, if injecting CSS code via the **patches.json** file is not sufficient to solve the website problem, then apply a JS patch in the **patches.js** file aforementioned. Use the following guidelines when doing so:
+
+##Patch the Web
 
 Before applying a patch to a web page, contact the owner of that website, inform them about the problem, and request that they fix it. If your request is ignored or turned down, then you may resort to applying a patch to the web page with this script. 
 
-Remember, our top priority is to fix the web for everyone, not just the users of this extension through this patch script.
+Remember, our top priority is to fix the web for everyone, not just the users of this extension through patches.
 
-##How to Apply a Patch
+###How to Apply a Patch
 
-This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with a conditional `if ()` block. Don't let your code leak to the global scope.
+This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with a conditional `if ()` block. Don't let any variables in your code leak to the global scope. This is inefficient and (more importantly) has the potential to cause conflicts with variables in the native code.
 
-##Patches
+###Patches
 
 Check out [this page](http://my.opera.com/fix-the-web/blog/2012/03/01/how-to-patch-a-web-page) for guidelines for adding patches.
 
