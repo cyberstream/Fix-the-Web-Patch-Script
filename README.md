@@ -1,4 +1,8 @@
-#NOTICE: THIS REPOSITORY IS NO LONGER ACTIVE!
+# THIS PROJECT HAS BEEN DISCONTINUED
+
+**Update (March 2, 2022)**: As a group of developers who met through the Opera Browser community, we originally started this project with plans to patch malformed web pages that were improperly rendered when using Opera Presto. Before this project was completed, Opera migrated its rendering engine to Chromium, eliminating most of these rendering issues. 
+
+***
 
 Due to potential security vulnerabilities in the extension using the original method of fetching **patches.js** from Github, we have revised our approach for applying patches to web pages. 
 
@@ -6,17 +10,17 @@ The **patches.js** file is now located in the [main extension repository](http:/
 
 That being said, if injecting CSS code via the **patches.json** file is not sufficient to solve the website problem, then apply a JS patch in the **patches.js** file aforementioned. Use the following guidelines when doing so:
 
-##Patch the Web
+## Patch the Web
 
 Before applying a patch to a web page, contact the owner of that website, inform them about the problem, and request that they fix it. If your request is ignored or turned down, then you may resort to applying a patch to the web page with this script. 
 
 Remember, our top priority is to fix the web for everyone, not just the users of this extension through patches.
 
-###How to Apply a Patch
+### How to Apply a Patch
 
 This Javascript is injected into *all* web pages, so restrict the patch to the page(s) or website that needs the patch with a conditional `if ()` block. Don't let any variables in your code leak to the global scope. This is inefficient and (more importantly) has the potential to cause conflicts with variables in the native code.
 
-###Patches
+### Patches
 
 Check out [this page](http://my.opera.com/fix-the-web/blog/2012/03/01/how-to-patch-a-web-page) for guidelines for adding patches.
 
